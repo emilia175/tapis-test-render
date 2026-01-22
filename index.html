@@ -5,9 +5,30 @@
     <title>Tapis Pattern</title>
 </head>
 <body>
-    <h1>Tapis Pattern</h1>
 
-    <img src="/tapis" alt="Tapis Pattern Grid">
+    <h2>Generator Tapis Pattern</h2>
+
+    <form method="post">
+        <label>
+            Litere COLOANE:<br>
+            <input type="text" name="top" value="{{ top }}">
+        </label>
+        <br><br>
+
+        <label>
+            Litere RÂNDURI:<br>
+            <input type="text" name="side" value="{{ side }}">
+        </label>
+        <br><br>
+
+        <button type="submit">Generează</button>
+    </form>
+
+    {% if top and side %}
+        <hr>
+        <img src="/tapis?top={{ top }}&side={{ side }}" alt="Tapis Pattern">
+    {% endif %}
+
 </body>
 </html>
 
