@@ -5,20 +5,9 @@
     <title>Tapis Pattern</title>
 </head>
 <body>
+    <h1>Tapis Pattern</h1>
 
-<h2>Generator Tapis Pattern</h2>
-
-<form method="POST">
-    <input name="top" placeholder="Coloane" required>
-    <input name="side" placeholder="Rânduri" required>
-    <button type="submit">Generează</button>
-</form>
-
-<hr>
-
-{% if top and side %}
-    <img src="/tapis?top={{ top }}&side={{ side }}">
-{% endif %}
-
+    <img src="/tapis" alt="Tapis Pattern Grid">
 </body>
 </html>
+
